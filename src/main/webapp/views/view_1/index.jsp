@@ -11,9 +11,9 @@
     <title>登录</title>
 </head>
 <body>
-   <form>
-       <input type="text" name="name"/>
-       <input type="password" name="pass">
+   <form >
+       用户名:<input type="text" name="name"/><br/>
+       密码：<input type="password" name="pass"><br/>
        <input type="submit" value="登录">
    </form>
 
