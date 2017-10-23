@@ -26,7 +26,6 @@ public class loginServlet extends ServletBase {
     private PrintWriter out;   //输出
     private static  Connection conn; //数据库连接对象
     private String Message; //错误信息
-
 //测试用
 //    static {
 //        try {
@@ -35,7 +34,6 @@ public class loginServlet extends ServletBase {
 //            e.printStackTrace();
 //        }
 //    }
-
     @Override
     public void init() throws ServletException {
         super.init();
@@ -45,16 +43,13 @@ public class loginServlet extends ServletBase {
             e.printStackTrace();
             new SQLException("获取数据库连接失败！");
         }
-
     }
-
     @Override
     protected void doGet
             (HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
     }
-
     @Override
     protected void doPost
             (HttpServletRequest request, HttpServletResponse response)
@@ -62,41 +57,29 @@ public class loginServlet extends ServletBase {
             super.doPost(request,response);  //调用基类的doPost
             out = response.getWriter();      //获取输出对象
             UserBean userBean =null;
-
             String name = request.getParameter("name");//获取输入的用户名
             String password = request.getParameter("pass");//获取输入的密码
-            if (isName(name)==-1){
+            if (isName(name)==-1||match("\\w{1,15}",name)){
                 Message="请输入1-15个字符的用户名";
-                request.setAttribute("error",Message);
-                RequestDispatcher rd = request.getRequestDispatcher("/views/view_1/index.jsp");
-                rd.forward(request,response);
+                Dispatcher(request,response,Message);
             }
             int pass = isPassword(password);
             if (pass==-1){
                 Message="请输入1-6个数字的密码";
-                request.setAttribute("error",Message);
-                RequestDispatcher rd = request.getRequestDispatcher("/views/view_1/index.jsp");
-                rd.forward(request,response);
+                Dispatcher(request,response,Message);
             }
-
             userBean=getUserMassage(name);
             //判断用户名是否存在
             System.out.println(userBean);
             if (userBean.getUsername()==null){
                 Message="没有这个用户名";
-                request.setAttribute("error",Message);
-                RequestDispatcher rd = request.getRequestDispatcher("/views/view_1/index.jsp");
-                rd.forward(request,response);
+                Dispatcher(request,response,Message);
             }
-
             //判断密码是否正确
             System.out.println(pass+":"+userBean.getPassword());
             if (pass!=userBean.getPassword()){
-                System.out.println("0");
                 Message="密码错误";
-                request.setAttribute("error",Message);
-                RequestDispatcher rd = request.getRequestDispatcher("/views/view_1/index.jsp");
-                rd.forward(request,response);
+                Dispatcher(request,response,Message);
             }
 
             out.println("登录成功");
@@ -104,7 +87,22 @@ public class loginServlet extends ServletBase {
             out.println("年龄："+userBean.getAge());
 
     }
-
+    /**
+     * 跳转
+     *
+     * @param request  请求
+     * @param response 响应
+     * @param Message  传输的信息
+     * @throws ServletException
+     * @throws IOException
+     */
+    public void Dispatcher
+            (HttpServletRequest request,HttpServletResponse response,String Message)
+            throws ServletException, IOException {
+        request.setAttribute("error",Message);
+        RequestDispatcher rd = request.getRequestDispatcher("/views/view_1/index.jsp");
+        rd.forward(request,response);
+    }
     /**
      * 用户名校验
      */
@@ -113,7 +111,6 @@ public class loginServlet extends ServletBase {
           if (name.length()>15)code=-1;
           return code;
       }
-
     /**
      * 密码校验
      */
@@ -124,7 +121,6 @@ public class loginServlet extends ServletBase {
           }
           return pass;
       }
-
     /**
      * 获取数据库信息
      * @param id 用户名
