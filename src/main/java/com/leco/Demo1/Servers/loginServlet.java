@@ -16,6 +16,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * 登录处理类
@@ -117,7 +119,7 @@ public class loginServlet extends ServletBase {
      */
     public int isPassword(String password){
           int pass= -1;
-          if (password.matches("$[0-9]^")){
+          if (match("^\\d+$",password)){
                pass = Integer.parseInt(password);
           }
           return pass;
@@ -150,6 +152,18 @@ public class loginServlet extends ServletBase {
         return userBean;
     }
 
+
+    /**
+     * 字符串校验
+     * @param patterStr 正则表达式
+     * @param str       输入的字符串
+     * @return          是否符合校验
+     */
+    public boolean match(String patterStr,String str){
+        Pattern pattern = Pattern.compile(patterStr);
+        Matcher matcher = pattern.matcher(str);
+        return matcher.matches();
+    }
     /*---------------------------测试------------------------------*/
 
 
@@ -161,6 +175,14 @@ public class loginServlet extends ServletBase {
     }
 
 
+    @Test
+    public void testMattern(){
+           String regex = "^(\\d{3,4}-)?\\d{6,8}$";
+           if ( match("\\d+", "3123123"))
+               System.out.println(1);
+           else
+               System.out.println(0);
 
+    }
 
 }
