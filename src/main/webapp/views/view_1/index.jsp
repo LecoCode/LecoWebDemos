@@ -7,7 +7,16 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<%!
+    String error="";
+%>
+<%
+    if (request.getAttribute("error")!=null){
+        error= (String)request.getAttribute("error");
+        request.setAttribute("error","");
+    }
 
+%>
 <head>
     <title>登录</title>
 </head>
@@ -17,6 +26,7 @@
        密码：<input type="password" name="pass"><br/>
        <input type="submit" value="登录">
    </form>
+   <h4 style="color: crimson"><%=error%></h4>
 
 
 </body>

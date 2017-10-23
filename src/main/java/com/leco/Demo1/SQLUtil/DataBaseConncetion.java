@@ -33,15 +33,34 @@ public class DataBaseConncetion {
 
     }
 
-
-    public Connection getConnection() throws SQLException {
+    /**
+     * 获取连接池
+     * @return
+     * @throws SQLException
+     */
+    public static Connection getConnection() throws SQLException {
         if (dataSource==null)return null;
              return dataSource.getConnection();
     }
 
 
+
+
+
     @Test
-     public void test() throws SQLException {
+    public void testNewsConncetion() throws SQLException {
+        DataBaseConncetion conn1 = new DataBaseConncetion();
+        DataBaseConncetion conn2 = new DataBaseConncetion();
+        System.out.println((conn1.getConnection()).hashCode());
+        System.out.println((conn2.getConnection()).hashCode());
+    }
+
+    /**
+     * 测试
+     * @throws SQLException
+     */
+    @Test
+     public void testConncetion() throws SQLException {
         Connection conn = getConnection();
         if (conn!=null)
             System.out.println(1);
