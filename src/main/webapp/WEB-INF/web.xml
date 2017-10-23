@@ -7,7 +7,7 @@
   
   <servlet>
     <servlet-name>demo1LoginServlet</servlet-name>
-    <servlet-class>com.leco.Demo1.loginServlet</servlet-class>
+    <servlet-class>com.leco.Demo1.Servers.loginServlet</servlet-class>
   </servlet>
   
   <servlet-mapping>
