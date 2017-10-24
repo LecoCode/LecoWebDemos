@@ -1,4 +1,4 @@
-package com.leco.Demo1.SQLUtil;
+package com.leco.SQLUtil;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.junit.Test;

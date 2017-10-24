@@ -15,7 +15,6 @@
         error= (String)request.getAttribute("error");
         request.setAttribute("error","");
     }
-
 %>
 <head>
     <title>登录</title>

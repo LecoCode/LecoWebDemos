@@ -9,10 +9,19 @@
     <servlet-name>demo1LoginServlet</servlet-name>
     <servlet-class>com.leco.Demo1.Servers.loginServlet</servlet-class>
   </servlet>
-  
+  <servlet>
+    <servlet-name>demo2LignUpServlet</servlet-name>
+    <servlet-class>com.leco.Demo2.Servers.signUp</servlet-class>
+  </servlet>
+
+  <!--servlet-mapping-->
   <servlet-mapping>
     <servlet-name>demo1LoginServlet</servlet-name>
     <url-pattern>/demo1/login</url-pattern>
   </servlet-mapping>
 
+  <servlet-mapping>
+    <servlet-name>demo2LignUpServlet</servlet-name>
+    <url-pattern>/demo2/lignup</url-pattern>
+  </servlet-mapping>
 </web-app>

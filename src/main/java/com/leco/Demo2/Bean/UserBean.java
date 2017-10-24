@@ -1,7 +1,7 @@
-package com.leco.Demo1.Bean;
+package com.leco.Demo2.Bean;
 
 /**
- * 登录Bean
+ * 注册Bean
  */
 public class UserBean {
     private String id;

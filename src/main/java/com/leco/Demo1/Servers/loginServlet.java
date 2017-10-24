@@ -2,7 +2,7 @@ package com.leco.Demo1.Servers;
 
 import com.leco.Base.ServletBase;
 import com.leco.Demo1.Bean.UserBean;
-import com.leco.Demo1.SQLUtil.DataBaseConncetion;
+import com.leco.SQLUtil.DataBaseConncetion;
 import org.junit.Test;
 
 import javax.servlet.RequestDispatcher;
@@ -15,7 +15,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
