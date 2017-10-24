@@ -6,17 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c110038-4a9f-484d-bedc-abd68cd3d85e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leco/Demo2/Bean/UserBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/leco/Demo2/Servers/signUp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/leco/Demo1/SQLUtil/DataBaseConncetion.java" afterPath="$PROJECT_DIR$/src/main/java/com/leco/SQLUtil/DataBaseConncetion.java" />
+    <list default="true" id="2c110038-4a9f-484d-bedc-abd68cd3d85e" name="Default" comment="leco">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leco/Demo1/Bean/UserBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/leco/Demo1/Bean/UserBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/leco/Demo1/Servers/loginServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/leco/Demo1/Servers/loginServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/view_1/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/view_1/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="575">
-              <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+              <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -601,7 +592,7 @@
       <workItem from="1508739630205" duration="9761000" />
       <workItem from="1508750727350" duration="10636000" />
       <workItem from="1508766540505" duration="4791000" />
-      <workItem from="1508810855782" duration="719000" />
+      <workItem from="1508810855782" duration="754000" />
     </task>
     <task id="LOCAL-00001" summary="leco">
       <created>1508740399705</created>
@@ -694,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1508769905474</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="leco">
+      <created>1508811592452</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1508811592453</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -730,7 +728,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25907000" />
+    <option name="totallyTimeSpent" value="25942000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -849,6 +847,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -990,6 +989,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -998,6 +998,7 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="325">
             <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1053,7 +1054,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
-          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
           <folding />
         </state>
       </provider>
