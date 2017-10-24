@@ -5,7 +5,7 @@
 
 <ol>
     <li><a href="views/view_1/index.jsp">登录</a></li>
-
+    <li><a href="views/view_2/index.jsp">注册</a></li>
 </ol>
 
 
