@@ -8,20 +8,25 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>登录</title>
+    <title>注册</title>
+    <%!String error = "";%>
+    <%
+        if (request.getAttribute("error")!=null){
+            error = (String)request.getAttribute("error");
+        }
+    %>
 </head>
 <body>
 
-    <form>
-        用户名：<input type="text" name="name"/><br/>
+    <form action="/demo2/lignup" method="post">
+        用户名：<input type="text" name="id"/><br/>
         密 码：<input type="password" name="password"/><br/>
         确认密码：<input type="password" name="passwordCopy"/><br/>
-        <input type="text" name="test"/><br/>
-        <input type="radio" name="" value="男"/><br/>
-        <input type="radio" name="age" value="女"/><br/>
-
+        姓 名：<input type="text" name="username"/><br/>
+        年 龄：<input type="test" name="age"/><br/>
+        <input type="submit" value="注册"/>
     </form>
-
+    <h4 style="color: red"><%=error%></h4>
 
 </body>
 </html>

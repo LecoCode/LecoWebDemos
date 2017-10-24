@@ -6,8 +6,26 @@ package com.leco.Demo2.Bean;
 public class UserBean {
     private String id;
     private int password;
+    private int passwordCopy;
     private String username;
     private String age;
+    private int code;
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public int getPasswordCopy() {
+        return passwordCopy;
+    }
+
+    public void setPasswordCopy(int passwordCopy) {
+        this.passwordCopy = passwordCopy;
+    }
 
     public String getId() {
         return id;
