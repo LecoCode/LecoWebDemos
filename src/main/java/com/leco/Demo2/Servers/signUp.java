@@ -24,9 +24,7 @@ import java.util.regex.Pattern;
 
 public class signUp extends ServletBase{
     private String [] inputstr = {"id","password","passwordCopy","username","age"}; //表单字段数组
-    protected void doPost
-            (HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         super.doPost(request,response);
         System.out.println(request.getParameter("id"));
         UserBean analysis = analysis(request);
